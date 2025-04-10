@@ -4,20 +4,20 @@
   <h3>Visualize API Responses with Style | JSON Formatter & Image Preview</h3>
   
   <!-- Dynamic Badges -->
-<img src="https://img.shields.io/github/license/Sobhan-SRZA/API-Response-Viewer?label=License&style=flat-square">
-    <img src="https://img.shields.io/github/last-commit/Sobhan-SRZA/API-Response-Viewer?label=Last Commit&style=flat-square">
-    <img src="https://img.shields.io/github/languages/code-size/Sobhan-SRZA/API-Response-Viewer?label=Code Size&style=flat-square">
-    <img src="https://img.shields.io/github/directory-file-count/Sobhan-SRZA/API-Response-Viewer?label=Files&style=flat-square">
-    <br>
-    <img src="https://img.shields.io/github/forks/Sobhan-SRZA/API-Response-Viewer?label=Forks&style=flat-square">
-    <img src="https://img.shields.io/github/stars/Sobhan-SRZA/API-Response-Viewer?label=Stars&style=flat-square">
-    <img src="https://img.shields.io/github/watchers/Sobhan-SRZA/API-Response-Viewer?label=Watchers&style=flat-square">
-    <br>
-    <img style="display:block;margin-left:auto;margin-right:auto;width:30%;" src="https://github-readme-stats.vercel.app/api/pin/?username=Sobhan-SRZA&repo=API-Response-Viewer&theme=react">
-    <h3>⚙ Tech Stack</h3>
-    <img src="https://badges.aleen42.com/src/javascript.svg">
-    <img src="https://badges.aleen42.com/src/html5.svg">
-    <img src="https://badges.aleen42.com/src/css3.svg">
+  <img alt="License" src="https://img.shields.io/github/license/Sobhan-SRZA/API-Response-Viewer?label=License&style=flat-square">
+  <img alt="Last Commit" src="https://img.shields.io/github/last-commit/Sobhan-SRZA/API-Response-Viewer?label=Last Commit&style=flat-square">
+  <img alt="Code Size" src="https://img.shields.io/github/languages/code-size/Sobhan-SRZA/API-Response-Viewer?label=Code Size&style=flat-square">
+  <img alt="Files Count" src="https://img.shields.io/github/directory-file-count/Sobhan-SRZA/API-Response-Viewer?label=Files&style=flat-square">
+  <br>
+  <img alt="Forks" src="https://img.shields.io/github/forks/Sobhan-SRZA/API-Response-Viewer?label=Forks&style=flat-square">
+  <img alt="Stars" src="https://img.shields.io/github/stars/Sobhan-SRZA/API-Response-Viewer?label=Stars&style=flat-square">
+  <img alt="Watcher" src="https://img.shields.io/github/watchers/Sobhan-SRZA/API-Response-Viewer?label=Watchers&style=flat-square">
+  <br>
+  <img alt="Repository" style="display:block;margin-left:auto;margin-right:auto;width:30%;" src="https://github-readme-stats.vercel.app/api/pin/?username=Sobhan-SRZA&repo=API-Response-Viewer&theme=react">
+  <h3>⚙ Tech Stack</h3>
+  <img alt="js" src="https://badges.aleen42.com/src/javascript.svg">
+  <img alt="css" src="https://badges.aleen42.com/src/html5.svg">
+  <img alt="html" src="https://badges.aleen42.com/src/css3.svg">
 </div>
 
 ---

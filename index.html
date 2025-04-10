@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>API Response Viewer - Display JSON & Images from APIs</title>
+  <meta name="description"
+    content="  visualize API responses with JSON formatting and embedded image display. Perfect for developers testing REST APIs.">
+  <meta name="keywords" content="API viewer, JSON formatter, REST API tester, API image display, Sobhan SRZA, Persian Caesar, Mr.Sinre">
+  <meta name="author" content="Sobhan-SRZA">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://https://sobhan.epizy.com/api-response-viewer">
+  <meta property="og:title" content="API Response Viewer">
+  <meta property="og:description" content="Visualize API responses with JSON formatting and image previews.">
+  <meta property="og:image" content="https://https://sobhan.epizy.com/api-response-viewer/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://https://sobhan.epizy.com/api-response-viewer">
+  <meta property="twitter:title" content="API Response Viewer">
+  <meta property="twitter:description" content="Visualize API responses with JSON formatting and image previews.">
+  <meta property="twitter:image" content="https://https://sobhan.epizy.com/api-response-viewer/images/og-image.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "API Response Viewer",
+      "url": "https://sobhan.epizy.com/api-response-viewer",
+      "applicationCategory": "Developer Tools",
+      "operatingSystem": "Web",
+      "screenshot": "https://sobhan.epizy.com/api-response-viewer/images/screenshot.jpg",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+
+  <!-- Styles & Resources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">API Response Viewer</h1>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#input-section" class="nav__link">Input</a></li>
+        <li><a href="#image-section" class="nav__link">Image</a></li>
+        <li><a href="#json-section" class="nav__link">JSON</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section id="input-section" class="section input-section">
+      <form id="api-form" class="api-form">
+        <div class="form-group">
+          <label for="api-url" class="form-label">API Endpoint URL:</label>
+          <input type="url" id="api-url" class="form-input" placeholder="https://api.example.com/data" required
+            pattern="https?://.+">
+          <button type="submit" class="btn btn-primary">Fetch Data</button>
+        </div>
+
+        <div class="form-group">
+          <label for="image-path" class="form-label">Image Path in JSON:</label>
+          <input type="text" id="image-path" class="form-input" placeholder="e.g. data.image.url">
+          <button type="button" id="preview-image" class="btn btn-secondary">Preview Image</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="output-section" class="section output-section" hidden>
+      <div class="loader" hidden></div>
+
+      <section id="image-section" class="image-section" hidden>
+        <h2 class="section-title">Image Preview</h2>
+        <div class="image-container">
+          <img id="output-image" class="output-image" alt="API image response">
+        </div>
+      </section>
+
+      <section id="json-section" class="json-section">
+        <h2 class="section-title">JSON Response</h2>
+        <pre class="json-output"><code id="json-output" class="language-json"></code></pre>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3 class="footer-title">About API Viewer</h3>
+        <p class="footer-text">A simple tool to visualize API responses with JSON formatting and embedded image display.
+        </p>
+      </div>
+
+      <!-- <div class="footer-section links">
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="footer-list">
+          <li><a href="#input-section" class="footer-link">Input</a></li>
+          <li><a href="#image-section" class="footer-link">Image</a></li>
+          <li><a href="#json-section" class="footer-link">JSON</a></li>
+        </ul>
+      </div> -->
+
+      <div class="footer-section contact">
+        <h3 class="footer-title">Contact</h3>
+        <ul class="footer-list">
+          <li>Email: <a href="mailto:sobhan.rasoulzadeh.asl@gmail.com" class="footer-link">sobhan.rasoulzadeh.asl@gmail.com</a></li>
+          <li>GitHub: <a href="https://github.com/Sobhan-SRZA" target="_blank" rel="noopener"
+              class="footer-link">@Sobhan-SRZA</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; 2025 API Viewer Made with &hearts; by Sobhan-SRZA | All rights reserved | Version
+        1.0.0</p>
+      <div class="social-icons">
+        <a href="https://discord.com/users/865630940361785345" class="social-icon" target="_blank"
+          rel="noopener noreferrer" aria-label="Discord">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+              d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z" />
+          </svg>
+        </a>
+
+        <a href="https://www.instagram.com/mr.sinre/" class="social-icon" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+        </a>
+
+        <a href="https://www.youtube.com/@mr_sinre" class="social-icon" target="_blank" rel="noopener noreferrer"
+          aria-label="YouTube">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          </svg>
+        </a>
+
+        <a href="https://github.com/Sobhan-SRZA/" class="social-icon" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+
+        <a href="http://sobhan.epizy.com/" class="social-icon" target="_blank" rel="noopener noreferrer"
+          aria-label="Personal Website">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+              d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1 20.945v-2.927A7.001 7.001 0 015.1 6.381a9.001 9.001 0 005.9 14.564zm2 0A9.004 9.004 0 0018.945 13H13v7.945zM18.945 11A9.004 9.004 0 0013 3.055V11h5.945z" />
+          </svg>
+        </a>
+
+        <a href="https://t.me/Sobhan_SRZA" class="social-icon" target="_blank" rel="noopener noreferrer"
+          aria-label="Telegram">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+              d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.05 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.203-.658-.643.136-.953l11.566-4.458c.538-.196 1.006.128.832.941z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-json.min.js"></script>
+  <script src="script.js" type="module"></script>
+</body>
+
+</html>

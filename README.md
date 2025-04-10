@@ -1,6 +1,3 @@
-# API-Response-Viewer
-Instantly visualize API responses with JSON formatting and embedded image display. Perfect for developers testing REST APIs.
-
 <div align="center">
     <img src="https://badges.aleen42.com/src/javascript.svg">
     <img src="https://badges.aleen42.com/src/html5.svg">
@@ -17,6 +14,16 @@ Instantly visualize API responses with JSON formatting and embedded image displa
     <div>
         <img style="display:block;margin-left:auto;margin-right:auto;width:30%;" src="https://github-readme-stats.vercel.app/api/pin/?username=Sobhan-SRZA&repo=API-Response-Viewer&theme=react">
     </div>
+</div>
+
+# API-Response-Viewer
+Instantly visualize API responses with JSON formatting and embedded image display. Perfect for developers testing REST APIs.
+
+---
+
+## ScreenShots
+<div align="center">
+    <img style="display:block; width:60%;" src="/images/screenshot.jpg">
 </div>
 
 ---

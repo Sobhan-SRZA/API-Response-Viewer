@@ -290,23 +290,31 @@ pre.json-output {
 }
 
 .social-icons {
- display: flex;
- justify-content: center;
- gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .social-icon {
- color: #888;
- transition: color 0.3s ease;
+  color: #888;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-icon:hover {
- color: var(--primary-color);
+  color: var(--primary-color);
+  background: rgba(0, 179, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .icon {
- width: 24px;
- height: 24px;
+  width: 28px;
+  height: 28px;
 }
 
 /* Responsive Footer */
@@ -325,4 +333,15 @@ pre.json-output {
    flex-direction: column;
    gap: 0.5rem;
  }
+}
+
+@media (max-width: 480px) {
+  .social-icons {
+    gap: 1rem;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
 }

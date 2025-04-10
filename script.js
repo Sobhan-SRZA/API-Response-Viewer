@@ -9,29 +9,26 @@ class APIViewer {
   this.jsonOutput = document.getElementById("json-output");
   this.loader = document.querySelector(".loader");
   this.outputImage = document.getElementById("output-image");
-  this.navList = document.querySelector(".nav__list");
+  this.navLinks = document.querySelectorAll(".nav__link");
 
   this.initEventListeners();
  }
 
  initEventListeners() {
-  addEventListener("DOMContentLoaded", () => {
-   const sections = ["image-section", "input-section", "json-section"];
-   const [__, tag] = document.URL.split("#")
-   if (sections.includes(tag)) {
-    const allLinks = this.navList.querySelectorAll("a")
-    allLinks.forEach((link)=>link.classList.remove("active"))
-    for (const link of allLinks) {
-     const [__, cleanHref] = link.href.split("#")
-     if (sections.includes(cleanHref)) {
-      link.classList.add("active")
-     }
-    }
-   }
-
-  });
   this.form.addEventListener("submit", this.handleSubmit.bind(this));
   this.previewImageBtn.addEventListener("click", this.previewImage.bind(this));
+  setInterval(() => {
+   this.locationString = document.URL.toString();
+   const [__, tag] = this.locationString.split("#");
+   this.navLinks.forEach((link) => {
+    const [__, cleanHref] = link.href.split("#");
+    if (tag === cleanHref)
+     link.classList.add("active");
+
+    else
+     link.classList.remove("active");
+   });
+  })
  }
 
  async handleSubmit(e) {
